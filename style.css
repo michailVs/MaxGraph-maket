@@ -115,7 +115,7 @@ body {
 
 header {
   background: url("./assets/bgHeader.jpeg") center/cover;
-  width: 100rem;
+  width: 100%;
   height: 56.25rem;
   display: flex;
   justify-content: center;
@@ -124,6 +124,7 @@ header {
 }
 
 .container {
+  margin-top: 1.875rem;
   width: 75rem;
   padding: 0 1rem;
   display: flex;
@@ -183,7 +184,7 @@ header {
 .title {
   font-size: 6rem;
   font-weight: 600;
-  width: 58.5rem;
+  max-width: 58.5rem;
   word-wrap: break-word;
 }
 
@@ -191,7 +192,7 @@ header {
   margin-top: 1.9em;
   font-size: 1rem;
   font-weight: 400;
-  width: 29.25rem;
+  max-width: 29.25rem;
 }
 
 .button {
@@ -224,7 +225,7 @@ header {
   font-size: 4rem;
   font-weight: 300;
   color: var(--color-dark-grey);
-  width: 13.13rem;
+  max-width: 13.13rem;
   height: 5.63rem;
 }
 
@@ -236,13 +237,13 @@ header {
 }
 
 .portfolio__right {
-  width: 35.625rem;
+  max-width: 35.625rem;
 }
 
 .portfolio__right .title {
   color: var(--color-dark-grey);
-  width: 35.625rem;
-  font-size: 44px;
+  max-width: 35.625rem;
+  font-size: 2.75rem;
   font-weight: 700;
 }
 
@@ -360,8 +361,7 @@ header {
   font-size: 2.25rem;
   font-weight: 500;
   color: var(--color-dark-grey);
-  width: 51.25rem;
-  height: 23.63rem;
+  max-width: 51.25rem;
 }
 
 .blog .author {
@@ -377,9 +377,12 @@ header {
   color: var(--color-grey);
 }
 
+.buffer {
+  width: 100%;
+}
 .buffer .container {
   margin-top: 11.875rem;
-  width: 100rem;
+  width: 100%;
   height: 56.25rem;
   background: url("./assets/buffer.jpeg") center/cover;
 }
@@ -403,7 +406,6 @@ header {
 
 .services__title {
   width: 9.94rem;
-  height: 2.63rem;
   font-size: 2rem;
   font-weight: 500;
   color: var(--color-dark-grey);
@@ -411,7 +413,6 @@ header {
 
 .services__descr {
   width: 35.63rem;
-  height: 4.5rem;
   font-size: 1rem;
   font-weight: 400;
   color: var(--color-grey);
@@ -419,8 +420,7 @@ header {
 
 .footer {
   margin-top: 11.875rem;
-  width: 100rem;
-  height: 25rem;
+  width: 100%;
   background-color: var(--color-dark-grey);
   display: flex;
   align-items: center;
@@ -431,7 +431,6 @@ header {
   flex-direction: row;
   height: 25rem;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .footer__left, .footer__right {
@@ -461,8 +460,7 @@ header {
 }
 
 .footer__title {
-  width: 31.31rem;
-  height: 5.25rem;
+  max-width: 31.31rem;
   font-size: 2rem;
   font-weight: 500;
   color: var(--color-white);
@@ -473,7 +471,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 35.63rem;
+  max-width: 35.63rem;
   height: 2.75rem;
   border-bottom: 0.06rem solid var(--color-grey);
   padding-bottom: 1.5rem;
@@ -485,7 +483,7 @@ header {
   font-weight: 700;
   color: var(--color-grey);
   background-color: transparent;
-  width: 27.5rem;
+  max-width: 27.5rem;
   height: 1.75rem;
 }
 
@@ -495,4 +493,55 @@ header {
   background: url("./assets/Arrow.svg");
   border: 0.06rem solid var(--color-white);
   border-style: dashed;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 62.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 48rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .portfolio .container {
+    gap: 1.875rem;
+  }
+  .services .container > div {
+    gap: 1.875rem;
+  }
+  .footer .container {
+    gap: 1.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 30rem;
+  }
+  .navbar {
+    display: none;
+  }
+  .portfolio .container {
+    flex-direction: column;
+  }
+  .blog .container {
+    gap: 2rem;
+  }
+  .blog .title {
+    font-size: 2rem;
+  }
+  .footer .container {
+    flex-direction: column;
+  }
+  .footer {
+    padding-bottom: 11rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 20rem;
+  }
+}
