@@ -12,9 +12,7 @@ burger.addEventListener('click', () => {
     menu.style.height = '100svh'
     menu.style.justifyContent = 'center'
     Array.from(menu.children).forEach(el => el.style.fontSize = '2.25rem')
-    search.style.position = 'absolute'
-    search.style.top = '2.25rem'
-    search.style.right = '1.875rem'
+    
     popup.append(search, menu)
     popup.addEventListener('click', e => {
         if (!e.target.classList.contains('navbar__link') && !e.target.classList.contains('search') && !e.target.parentNode.classList.contains('search')) {

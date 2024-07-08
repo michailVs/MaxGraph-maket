@@ -534,6 +534,15 @@ body.active {
   .popup {
     display: block;
   }
+  .search {
+    position: absolute;
+    top: 2.25rem;
+    right: 13rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
   .portfolio .container {
     flex-direction: column;
   }
@@ -553,5 +562,13 @@ body.active {
 @media (max-width: 480px) {
   .container {
     width: 20rem;
+  }
+  .search {
+    right: 8rem;
+  }
+}
+@media (max-width: 375px) {
+  .search {
+    right: 4rem;
   }
 }
